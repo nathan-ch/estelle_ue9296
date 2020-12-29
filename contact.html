@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My website for UE9296">
+    <meta name="author" content="Estelle Lepage">
+    <title>Contact</title>
+    <!-- JS -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS only -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="container text-center text-white bg-dark">   
+    <header class="mb-4">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Estelle Lepage</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/javascript.html">Javascript</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="row text-center p-section">
+        <div class="col">
+          <h1 class="display-4 fw-normal">Pour me contacter</h1>
+          <div class="row p-section">
+            <div class="col">
+              <img src="/assets/telephone.svg" alt="" width="256" height="256" title="Phone" id="phone">
+              <h4 class="m-3" id="estelle-phone">06 37 67 77 27</h4>
+            </div>
+            <div class="col">
+              <img src="/assets/email.svg" alt="" width="256" height="256" title="emial" id="email">
+              <h4 class="m-3" id="estelle-email">estellelepagepro@gmail.com</h4>
+            </div>
+          </div>
+        </div>
+        <h1>Pratique Javascript</h1>
+        <p>Avec le framework Jquery (cliquez sur les icônes)</p>
+      </div>
+    </main>
+    <footer class="mt-auto text-white-50">
+      <p>Créé avec amour par Estelle Lepage</p>
+    </footer>
+  </body>
+  <script>
+    // Utilisation de la fonction toggle() de Jquery qui fait passer un élément de display:none à display:block
+    // Création et appel de la fonction handlePhoneClick
+    $("#phone").on("click",handlePhoneClick);
+    function handlePhoneClick() {
+      $("#estelle-phone").toggle();
+    }
+    // Utilisation d'une fonction anonyme 
+    $("#email").on("click",function(){$("#estelle-email").toggle()});
+  </script>
+</html>

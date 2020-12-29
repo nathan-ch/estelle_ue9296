@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My website for UE9296">
+    <meta name="author" content="Estelle Lepage">
+    <title>Estelle Lepage Portfolio</title>
+    <!-- JS -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS only -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="container text-center text-white bg-dark">   
+    <header class="mb-4">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Estelle Lepage</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/javascript.html">Javascript</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+      <main>
+        <section class="row text-center p-section">
+          <h1>Pratique Javascript</h1>
+          <p>Sans le framework Jquery</p>
+          <div class="col-3 m-auto">
+            <button onclick="changeColorMode()" class="btn btn-primary">
+              Mode clair/sombre
+            </button>
+          </div>
+        </section>
+      </main>
+  <script>
+    // Creation d'une variable avec le mode du thème par défault
+     var colorMode = "sombre";
+    function changeColorMode() {
+      // Selection de l'élément body pour modifier sa classe
+      var body = document.body;
+      var navbar =document.getElementById("navbar")
+
+
+      // 3 signes '=' pour vérifier une condition
+      if (colorMode === "sombre") {
+        colorMode = "clair";
+        body.classList.remove("bg-dark");
+        body.classList.remove("text-white");
+        navbar.classList.remove("bg-dark");
+        navbar.classList.remove("navbar-dark");
+        navbar.classList.add("navbar-light");
+      } else {
+        colorMode = "sombre";
+        body.classList.add("bg-dark");
+        body.classList.add("text-white");
+        navbar.classList.add("navbar-light");
+        navbar.classList.add("navbar-dark");
+      }
+      msgAlert();
+    }
+
+    function msgAlert() {
+      alert("Vous allez passer en mode " + colorMode);
+    }
+
+
+  </script>
+  </body>
+</html>
